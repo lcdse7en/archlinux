@@ -20,7 +20,6 @@ $ locale-gen
 $ nvim /etc/locale.conf
   LANG=en_US-UTF-8
 
-
 # 主机设置
 $ nvim /etc/hostname
   se7en-pc
@@ -42,13 +41,11 @@ $ systemctl enable NetworkManager
 $ passwd
 ```
 
-
 #### pacman
 ```sh
 sudo pacman -S nitrogen
 sudo pacman -S rofi
 ```
-
 
 #### yay
 ```sh
@@ -73,8 +70,6 @@ exec dwm
 exec dbus-launch dwm
 ################## End #####################
 ```
-
-<++>
 
 #### DWM
 ```sh
@@ -116,7 +111,6 @@ git clone https://git.suckless.org/slstatus
 cd slstatus
 sudo make clean install
 ```
-
 
 #### rofi
 
