@@ -57,7 +57,24 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 ```
+#### xinitrc
+```sh
+sudo nvim /etc/X11/xinit/xinitrc
 
+################## Start #####################
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+fcitx &
+picom -CGb &
+flameshot &
+exec slstatus &
+exec dwm
+exec dbus-launch dwm
+################## End #####################
+```
+
+<++>
 
 #### DWM
 ```sh
