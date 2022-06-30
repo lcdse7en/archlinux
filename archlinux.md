@@ -43,8 +43,14 @@ $ passwd
 
 #### pacman
 ```sh
+# 壁纸
 sudo pacman -S nitrogen
+
+# 程序启动器
 sudo pacman -S rofi
+
+# 剪切板
+sudo pacman -S xclip 
 ```
 
 #### yay
@@ -114,3 +120,14 @@ sudo make clean install
 
 #### rofi
 
+
+#### ranger
+```sh
+# 打开pdf文件
+sudo pacman -S zathura zathura-djvu zathura-pdf-poppler zathura-ps
+
+# 预览图片
+sudo pacman -S poppler
+```
+
+<++>
