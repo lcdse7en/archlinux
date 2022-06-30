@@ -123,11 +123,14 @@ sudo make clean install
 
 #### ranger
 ```sh
-# 打开pdf文件
+################# Start zathura打开和预览pdf文件 ####################
 sudo pacman -S zathura zathura-djvu zathura-pdf-poppler zathura-ps
+cd ~/.config
+git clone https://gitlab.com/HiPhish/zathura-config.git
+######################### End zathura ###############################
 
 # 预览图片
 sudo pacman -S poppler
 ```
 
-<++>
+
