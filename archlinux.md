@@ -155,6 +155,13 @@ X11LIB = /usr/include/X11
 sudo make clean install
 rm config.def.h
 
+#################### patches Start ##############
+wget st-alpha-0.8.2.diff
+wget st-anysize-0.8.1.diff
+wget st-dracula-0.8.5.diff
+#################### patches End ################
+
+sudo patch -p1 < xxx.diff
 ```
 
 #### fzf
