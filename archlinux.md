@@ -133,4 +133,54 @@ git clone https://gitlab.com/HiPhish/zathura-config.git
 sudo pacman -S poppler
 ```
 
+#### alacritty
+```sh
+
+```
+
+
+
+
+#### st
+```sh
+git clone https://git.suckless.org/st
+cd st
+
+vim config.mk
+########################
+X11INC = /usr/include/X11
+X11LIB = /usr/include/X11
+########################
+
+sudo make clean install
+rm config.def.h
+
+```
+
+#### fzf
+```sh
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+vim ~/.zshrc
+################################ Start #########################################
+export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
+export FZF_COMPLETION_TRIGGER='\'
+
+_fzf_compgen_path() {
+  fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+}
+
+_fzf_compgen_dir() {
+  fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+}
+################################### End ##########################################
+```
+
+#### rg
+```sh
+sudo pacman -S ripgrep
+```
+
+
 
