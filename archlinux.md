@@ -5,7 +5,7 @@
 # 安装系统
 $ pacstrap /mnt base linux linux-firmware 
 
-# 进入新系统
+进入新系统
 $ arch-chroot /mnt
 $ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtiem #设置时区
 
@@ -62,7 +62,10 @@ makepkg -si
 ```
 #### xinitrc
 ```sh
-sudo nvim /etc/X11/xinit/xinitrc
+sudo pacman -S xorg-xinit
+sudo cp /etc/X11/xinit/xinitrc .xinitrc
+sudo nvim .xinitrc
+
 
 ################## Start #####################
 export GTK_IM_MODULE=fcitx
@@ -123,6 +126,8 @@ sudo make clean install
 
 #### ranger
 ```sh
+yay -S atool w3m
+
 ################# Start zathura打开和预览pdf文件 ####################
 sudo pacman -S zathura zathura-djvu zathura-pdf-poppler zathura-ps
 cd ~/.config
@@ -135,7 +140,7 @@ sudo pacman -S poppler
 
 #### alacritty
 ```sh
-
+cargo install alacritty
 ```
 
 
@@ -171,6 +176,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 vim ~/.zshrc
 ################################ Start #########################################
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
 export FZF_COMPLETION_TRIGGER='\'
 
@@ -189,5 +196,11 @@ _fzf_compgen_dir() {
 sudo pacman -S ripgrep
 ```
 
+#### nvim
+```sh
+# MarkdownPreview
+sudo pacman -S glow
+```
 
+<++>
 
