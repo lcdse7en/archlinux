@@ -202,5 +202,24 @@ sudo pacman -S ripgrep
 sudo pacman -S glow
 ```
 
-<++>
+#### fanyi
+```sh
+npm install fanyi -g
+
+$ vim ~/.config/fanyi/.fanyirc
+{
+  "iciba": true,
+  "youdao": true,
+  "dictionaryapi": false,
+  "say": false,
+  "color": true
+}
+```
+
+#### archlinux 文件管理器pcmanfm
+```bash
+sudo pacman -S pcmanfm
+```
+
+
 
