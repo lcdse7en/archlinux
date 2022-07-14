@@ -1,3 +1,4 @@
+[[toc]]
 ### ArchLinux
 #### ArchLinux Install
 ```sh
@@ -60,6 +61,35 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 ```
+
+#### paru
+```sh
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+---- update packages ---
+paru -Syu
+paru -Sua
+```
+#### wechat
+```sh
+git clone https://github.com/vufa/deepin-wine-wechat-arch.git
+cd deepin-wine-wechat-arch
+makepkg -si
+
+paru wechat
+2 ---> wine-wechat-setup
+3 ---> deepin-wine-wechat
+```
+
+#### qq
+```sh
+paru -S icalingua++
+```
+
+
 #### xinitrc
 ```sh
 sudo pacman -S xorg-xinit
@@ -128,16 +158,25 @@ sudo make clean install
 ```sh
 yay -S atool w3m
 
-################# Start zathura打开和预览pdf文件 ####################
-sudo pacman -S zathura zathura-djvu zathura-pdf-poppler zathura-ps
-cd ~/.config
-git clone https://gitlab.com/HiPhish/zathura-config.git
-######################### End zathura ###############################
-
 # 预览图片
 sudo pacman -S poppler
 ```
 
+#### zathura
+```bash
+pacman -Q | grep zathura
+
+ $  zathura 0.4.9-1 
+ $  zathura-djvu 0.2.9-1 
+ $  zathura-pdf-poppler 0.3.0-1 
+ $  zathura-ps 0.2.7-1 
+
+sudo pacman -S zathura zathura-djvu zathura-pdf-poppler zathura-ps
+cd ~/.config
+git clone https://gitlab.com/HiPhish/zathura-config.git
+```
+
+<++>
 #### alacritty
 ```sh
 cargo install alacritty
@@ -220,6 +259,39 @@ $ vim ~/.config/fanyi/.fanyirc
 ```bash
 sudo pacman -S pcmanfm
 ```
+#### mutt
+```sh
+git clone git@github.com:lcdse7en/mutt-wizard.git
+cd mutt-wizard
+sudo make install 
 
+yay -S mutt-wizard-git
+sudo pacman -S neomutt isync msmtp pass
+
+############### mutt Start ################
+gpg --full-gen-key
+pass init 2353442022@qq.com
+mw add
+############### mutt End ################
+```
+
+- [ ✔️ ] imap.qq.com 993
+- [ ✔️ ] smtp.qq.com 587
+
+#### brew
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+<++>
+#### lazygit
+[lazygit_release](https://github.com/jesseduffield/lazygit/releases) 
+```sh
+wget https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Linux_x86_64.tar.gz
+tar xvf lazygit
+sudo mv lazygit /usr/local/bin/
+
+paru -S delta
+```
 
 
