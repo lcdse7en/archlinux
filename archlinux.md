@@ -156,7 +156,13 @@ sudo make clean install
 
 #### ranger
 ```sh
-yay -S atool w3m
+git clone git@github.com:lcdse7en/ranger.git
+
+# 安装图标
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/github_upload/ranger/plugins/ranger_devicons
+
+echo "default_linemode devicons" >> $HOME/github_upload/ranger/rc.conf
+yay -S atool w3m ueberzug
 
 # 预览图片
 sudo pacman -S poppler
@@ -283,14 +289,13 @@ mw add
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-<++>
 #### lazygit
 [lazygit_release](https://github.com/jesseduffield/lazygit/releases) 
 ```sh
-wget https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Linux_x86_64.tar.gz
-tar xvf lazygit
-sudo mv lazygit /usr/local/bin/
-
+git clone git@github.com:lcdse7en/lazygit.git
+cd lazygit
+tar xvf lazygit_0.20.4_Linux_x86_64.tar.gz
+sudo mv lazygit /usrl/local/bin/
 paru -S delta
 ```
 
