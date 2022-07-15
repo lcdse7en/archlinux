@@ -62,6 +62,19 @@ cd yay-bin
 makepkg -si
 ```
 
+#### brew
+[Installation](https://docs.brew.sh/Installation) 
+```sh
+git clone https://github.com/Homebrew/brew homebrew
+
+eval "$(homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
+
+brew -v 
+# Homebrew 3.5.4
+```
+
 #### paru
 ```sh
 sudo pacman -S --needed base-devel
@@ -261,7 +274,7 @@ $ vim ~/.config/fanyi/.fanyirc
 }
 ```
 
-#### archlinux 文件管理器pcmanfm
+#### pcmanfm
 ```bash
 sudo pacman -S pcmanfm
 ```
@@ -284,10 +297,6 @@ mw add
 - [ ✔️ ] imap.qq.com 993
 - [ ✔️ ] smtp.qq.com 587
 
-#### brew
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
 
 #### lazygit
 [lazygit_release](https://github.com/jesseduffield/lazygit/releases) 
@@ -298,5 +307,23 @@ tar xvf lazygit_0.20.4_Linux_x86_64.tar.gz
 sudo mv lazygit /usrl/local/bin/
 paru -S delta
 ```
+
+#### sxiv
+```sh
+git clone https://github.com/muennich/sxiv.git
+cd sxiv
+make
+sudo make install
+make config.h
+```
+
+#### marktext
+```sh
+git clone https://aur.archlinux.org/marktext-bin.git 
+cd marktext-bin
+makepkg -si
+```
+
+
 
 
