@@ -317,12 +317,26 @@ sudo make install
 make config.h
 ```
 
-#### marktext
+#### fig
 ```sh
-git clone https://aur.archlinux.org/marktext-bin.git 
-cd marktext-bin
+git clone https://aur.archlinux.org/fig-beta.git
+cd fig-beta
 makepkg -si
 ```
+
+#### picom
+```sh
+git clone https://aur.archlinux.org/picom-jonaburg-git.git
+cd picom-jonaburg-git
+makepkg -si
+```
+
+#### joplin-desktop
+```sh
+yay -s joplin-desktop
+```
+
+
 
 
 
